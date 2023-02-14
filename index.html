@@ -53,14 +53,17 @@
                     console.log('Round ' + i);
                     let playerSelection = prompt("What do you want to select (Rock, Paper or Scissor) :");
                     let computerSelection = getComputerChoice();
-                    if(processGame(playerSelection.toLowerCase(), computerSelection) == 'player') {
+                    let result = processGame(playerSelection.toLowerCase(), computerSelection);
+                    if(result == 'player') {
                         playerCount++;
-                    } else {
+                    } else if(result == 'computer') {
                         computerCount++;
                     }
-                    console.log(processGame(playerSelection.toLowerCase(), computerSelection));
+                    console.log(result);
                 }
-                return result();
+                console.log(playerCount);
+                console.log(computerCount);
+                return alert(result());
             }
             
 
