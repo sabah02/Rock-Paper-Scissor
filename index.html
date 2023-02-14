@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rock-Paper-Scissor</title>
+        <script>
+            function getComputerChoice() {
+                let rand = Math.floor(((Math.random() * 3) + 1));
+                if(rand == 1) {
+                    return 'rock';
+                } else if (rand == 2) {
+                    return 'paper';
+                } else {
+                    return 'scissor';
+                }
+            }
+
+            function processGame(playerSelection, computerSelection) {
+                if(playerSelection == 'rock') {
+                    if(computerSelection == 'scissor') {
+                        return 'player';
+                    } else if(computerSelection == 'paper') {
+                        return 'computer';
+                    } else {
+                        return 'tie';
+                    }
+                } else if(playerSelection == 'scissor') {
+                    if(computerSelection == 'paper') {
+                        return 'player';
+                    } else if(computerSelection == 'rock') {
+                        return 'computer';
+                    } else {
+                        return 'tie';
+                    }
+                } else {
+                    if(computerSelection == 'scissor') {
+                        return 'computer';
+                    } else if(computerSelection == 'rock') {
+                        return 'player';
+                    } else {
+                        return 'tie';
+                    }
+                }
+
+            }
+
+            let playerCount = 0;
+            let computerCount = 0;
+
+            function playGame() {
+                for(let i = 0; i < 5; i++) {
+                    console.log('Round ' + i);
+                    let playerSelection = prompt("What do you want to select (Rock, Paper or Scissor) :");
+                    let computerSelection = getComputerChoice();
+                    if(processGame(playerSelection.toLowerCase(), computerSelection) == 'player') {
+                        playerCount++;
+                    } else {
+                        computerCount++;
+                    }
+                    console.log(processGame(playerSelection.toLowerCase(), computerSelection));
+                }
+                return result();
+            }
+            
+
+            function result() {
+                if(playerCount > computerCount) {
+                    return "You Win! Paper beats Rock";
+                } else if(playerCount < computerCount)   {
+                    return "You Lose! Paper beats Rock";
+                } else {
+                    return "Oh noo! It's a TIE";
+                }
+            }
+
+            playGame();
+            
+
+            
+
+            
+
+
+            
+        </script>
+    </head>
+</html>
