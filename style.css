@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+* {
+    background-color: black;
+    font-family: 'Comfortaa', cursive;
+}
+.title {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.buttons button {
+    border: 0.5px solid white;
+    padding: 16px;
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content:center;
+    margin-top: 32px;
+    gap: 32px;
+}
+
+.display, .score, .title, p {
+    color: white;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+}
+
+main p {
+    text-align: center;
+}
+
+.start-game {
+    display: block;
+    justify-content: center;
+    border: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+.start-game button {
+    border: none;
+}
+
+.winner {
+    font-size: 36px;
+}

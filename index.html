@@ -4,88 +4,38 @@
     <head>
         <meta charset="utf-8">
         <title>Rock-Paper-Scissor</title>
-        <script>
-            function getComputerChoice() {
-                let rand = Math.floor(((Math.random() * 3) + 1));
-                if(rand == 1) {
-                    return 'rock';
-                } else if (rand == 2) {
-                    return 'paper';
-                } else {
-                    return 'scissor';
-                }
-            }
-
-            function processGame(playerSelection, computerSelection) {
-                if(playerSelection == 'rock') {
-                    if(computerSelection == 'scissor') {
-                        return 'player';
-                    } else if(computerSelection == 'paper') {
-                        return 'computer';
-                    } else {
-                        return 'tie';
-                    }
-                } else if(playerSelection == 'scissor') {
-                    if(computerSelection == 'paper') {
-                        return 'player';
-                    } else if(computerSelection == 'rock') {
-                        return 'computer';
-                    } else {
-                        return 'tie';
-                    }
-                } else {
-                    if(computerSelection == 'scissor') {
-                        return 'computer';
-                    } else if(computerSelection == 'rock') {
-                        return 'player';
-                    } else {
-                        return 'tie';
-                    }
-                }
-
-            }
-
-            let playerCount = 0;
-            let computerCount = 0;
-
-            function playGame() {
-                for(let i = 0; i < 5; i++) {
-                    console.log('Round ' + i);
-                    let playerSelection = prompt("What do you want to select (Rock, Paper or Scissor) :");
-                    let computerSelection = getComputerChoice();
-                    let result = processGame(playerSelection.toLowerCase(), computerSelection);
-                    if(result == 'player') {
-                        playerCount++;
-                    } else if(result == 'computer') {
-                        computerCount++;
-                    }
-                    console.log(result);
-                }
-                console.log(playerCount);
-                console.log(computerCount);
-                return alert(result());
-            }
-            
-
-            function result() {
-                if(playerCount > computerCount) {
-                    return "You Win! Paper beats Rock";
-                } else if(playerCount < computerCount)   {
-                    return "You Lose! Paper beats Rock";
-                } else {
-                    return "Oh noo! It's a TIE";
-                }
-            }
-
-            playGame();
-            
-
-            
-
-            
-
-
-            
-        </script>
+        <link rel="stylesheet" href="style.css">
+        
     </head>
+    <body>
+        <header>
+            <h1 class="title">Rock Paper Scissor</h1>
+        </header>
+        <main class="body">
+            <div class="score">
+                <div class="computer">
+                    <p class="oppComputer">Computer</p>
+                    <p class="computerScore">0</p>
+                </div>
+                <div>
+                    <p class="oppPlayer">Player</p>
+                    <p class="playerScore">0</p>
+                </div>
+            </div>
+            <div class="start-game">
+                <p class="display">Please Choose</p>
+                <p class="round">Round 0</p>
+            </div>
+            <div class="buttons">
+                <button class="rock">Rock</button>
+                <button class="paper">Paper</button>
+                <button class="scissor">Scissor</button>
+            </div>
+            <div>
+                <p class="winner"></p>
+            </div>
+            
+        </main>
+        <script src="app.js"></script>
+    </body>
 </html>
