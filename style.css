@@ -1,18 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
 * {
-    background-color: black;
+    background-color: #9395D3;
     font-family: 'Comfortaa', cursive;
 }
-.title {
-    text-align: center;
-    margin-top: 32px;
+
+/* body */
+
+.body { 
+    display: block;
 }
 
+/* title */
+
+.title {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 28px;
+}
+
+/* Score */
+
+.scoreDiv {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    font-size: 18px;
+    margin-top: -14px;
+    align-items: center;
+}
+
+.display, .score, .title, p {
+    color: black;
+}
+
+.computerScore, .playerScore {
+    font-weight: 10px;
+    font-size: 28px;
+    margin-top: -4px;
+}
+
+.tie {
+    font-size: 14px;
+}
+
+
+/* Start Display */
+
+.start-game {
+    display: block;
+    justify-content: center;
+    border: none;
+    margin: 12px;
+}
+
+.start-game button {
+    border: none;
+}
+
+.round {
+    font-weight: bolder;
+    margin-top: -16px;
+}
+
+/* Rock - Paper - Scissor Buttons */
+
 .buttons button {
-    border: 0.5px solid white;
+    border: none;
     padding: 16px;
-    color: white;
+    color: black;
 }
 
 .buttons {
@@ -22,32 +78,26 @@
     gap: 32px;
 }
 
-.display, .score, .title, p {
-    color: white;
+.img {
+    margin-top: -20px;
+    width: 70px;
+    height: 65px;
 }
 
-.score {
-    display: flex;
-    justify-content: center;
-    gap: 56px;
-}
+/* Text Common (tie, round, click to start) */
 
 main p {
     text-align: center;
 }
 
-.start-game {
-    display: block;
-    justify-content: center;
-    border: none;
-    margin: 12px;
-    font-weight: bold;
-}
-
-.start-game button {
-    border: none;
-}
+/* Winner display */
 
 .winner {
     font-size: 36px;
+    margin-top: 8px;
 }
+
+
+
+
+
