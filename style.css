@@ -16,7 +16,7 @@
 .title {
     text-align: center;
     margin-top: 28px;
-    font-size: 28px;
+    font-size: 38px;
 }
 
 /* Score */
@@ -25,7 +25,7 @@
     display: flex;
     justify-content: center;
     gap: 120px;
-    font-size: 18px;
+    font-size: 28px;
     margin-top: -14px;
     align-items: center;
 }
@@ -36,12 +36,12 @@
 
 .computerScore, .playerScore {
     font-weight: 10px;
-    font-size: 28px;
+    font-size: 38px;
     margin-top: -4px;
 }
 
 .tie {
-    font-size: 14px;
+    font-size: 24px;
 }
 
 
@@ -93,7 +93,7 @@ main p {
 /* Winner display */
 
 .winner {
-    font-size: 36px;
+    font-size: 46px;
     margin-top: 8px;
 }
 
