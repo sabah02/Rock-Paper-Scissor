@@ -26,7 +26,7 @@
     justify-content: center;
     gap: 120px;
     font-size: 3rem;
-    margin-top: -46px;
+    margin-top: -56px;
     align-items: center;
 }
 
@@ -51,7 +51,7 @@
     display: block;
     justify-content: center;
     border: none;
-    margin: 12px;
+    margin: 6px;
     font-size: 2rem;
 }
 
@@ -61,7 +61,7 @@
 
 .round {
     font-weight: bolder;
-    margin-top: -16px;
+    margin-top: -22px;
 }
 
 /* Rock - Paper - Scissor Buttons */
@@ -75,7 +75,7 @@
 .buttons {
     display: flex;
     justify-content:center;
-    margin-top: 32px;
+    margin-top: 42px;
     gap: 68px;
 }
 
